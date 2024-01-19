@@ -1,0 +1,69 @@
+# QR Scanner Library Test Cases
+
+This document outlines test cases for the QR Scanner Library to ensure its proper functionality.
+
+## Prerequisites
+
+1. Make sure you have the required dependencies installed (OpenCV and PyZbar).
+2. The camera should be available for testing.
+
+## Test Case 1: Scan QR Code
+
+**Objective:** Verify that the library can successfully scan and decode a QR code.
+
+**Steps:**
+1. Generate a test QR code with known data (e.g., "https://www.example.com").
+2. Display the QR code in front of the camera's view.
+3. Run the QR scanner library.
+4. Confirm that the library detects and prints the correct QR code data.
+
+**Expected Result:** The library should successfully scan and decode the test QR code data.
+
+## Test Case 2: Continuous Scanning
+
+**Objective:** Verify that the library can continuously scan for QR codes until interrupted.
+
+**Steps:**
+1. Generate multiple test QR codes with different data.
+2. Display the QR codes in front of the camera's view one by one.
+3. Run the QR scanner library.
+4. Confirm that the library detects and prints the correct QR code data for each code.
+5. Interrupt the scanning process by pressing the 'q' key.
+
+**Expected Result:** The library should continuously scan for QR codes and print their data until interrupted.
+
+## Test Case 3: No QR Code Found
+
+**Objective:** Verify that the library handles the absence of QR codes gracefully.
+
+**Steps:**
+1. Ensure that there are no QR codes in the camera's view.
+2. Run the QR scanner library.
+
+**Expected Result:** The library should detect the absence of QR codes and display an appropriate message.
+
+## Test Case 4: Library Cleanup
+
+**Objective:** Verify that the library releases camera resources upon termination.
+
+**Steps:**
+1. Run the QR scanner library.
+2. Interrupt the scanning process by pressing the 'q' key.
+
+**Expected Result:** The library should release the camera resources upon termination, preventing resource leaks.
+
+## Test Case 5: Integration with Application
+
+**Objective:** Verify the library's integration with a Python application.
+
+**Steps:**
+1. Integrate the QR scanner library into a Python application.
+2. Trigger the QR code scanning process from the application.
+3. Confirm that the library successfully scans and decodes QR codes.
+
+**Expected Result:** The library should seamlessly integrate with a Python application and provide QR code scanning functionality.
+
+## Conclusion
+
+The QR Scanner Library should pass all test cases outlined above to ensure its reliability and proper functioning.
+
